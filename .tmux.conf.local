@@ -251,7 +251,7 @@ tmux_conf_theme_window_status_format='#I #W'
 tmux_conf_theme_window_status_current_fg=$nord6      # black
 tmux_conf_theme_window_status_current_bg=$nord10      # light blue
 tmux_conf_theme_window_status_current_attr='bold'
-tmux_conf_theme_window_status_current_format=' #W '
+tmux_conf_theme_window_status_current_format=' #W '
 #tmux_conf_theme_window_status_current_format='#{circled_window_index} #W'
 #tmux_conf_theme_window_status_current_format='#I #W#{?window_zoomed_flag,🔍,}'
 
@@ -311,9 +311,9 @@ tmux_conf_theme_right_separator_sub='\uE0B3'
 #     - #{username_ssh}
 
 #   ﲵ            ﮊ ﮏ ♥ ﰸ ﯅  
-tmux_conf_theme_status_left='  #S '
+tmux_conf_theme_status_left=' #S '
 #tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} | %b%d日#(curl wttr.in?format="%%c%%20%%t") | %R | #{username}#{root} | ﯅#{hostname} '
-tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} |#(curl wttr.in?format="%%c%%20%%t") | %R | #{username}#{root} | ﯅#{hostname} '
+tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} |#(curl wttr.in?format="%%c%%20%%t") | %R | #{username}#{root} | #{hostname}  '
 
 # status left style
 tmux_conf_theme_status_left_fg=$nord5 # '#e4e4e4,#e4e4e4,#e4e4e4'  # black, white , white
@@ -422,10 +422,10 @@ tmux_conf_copy_to_os_clipboard=false
 # this is the place to override or undo settings
 
 # increase history size
-#set -g history-limit 10000
+set -g history-limit 10000
 
 # start with mouse mode enabled
-#set -g mouse on
+set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -440,7 +440,7 @@ tmux_conf_copy_to_os_clipboard=false
 # bind C-a send-prefix
 
 # move status line to top
-#set -g status-position top
+set -g status-position top
 
 # Tmux is automatically started after the computer/server is turned on.
 # set -g @continuum-boot 'on'
